@@ -359,3 +359,7 @@ body {
 .button_form button:hover{
     background-color: rgb(10, 131, 187);
 }
+
+#formulario{
+    display: none;
+}

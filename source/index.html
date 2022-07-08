@@ -22,7 +22,7 @@
                             <br>Playstation 3</button>
                     </div>
                     <div class="header_logo">
-                        <img src="./images/logo.png" id ="logo_img">
+                        <img src="../images/logo.png" id ="logo_img">
                     </div>
                     <div class = header_div_right></div>
                 </header>
@@ -52,7 +52,7 @@
                     <div class="header_button">
                     </div>
                     <div class="header_logo">
-                        <img src="./images/logo.png" id ="logo_img">
+                        <img src="../images/logo.png" id ="logo_img">
                     </div>
                     <div class = header_div_right></div>
                 </header>
@@ -74,6 +74,17 @@
                         <button id="volver_juegos">Volver</button>
                         <button id="enviar_form">Enviar</button>
                     </div>
+
+                    <form name="formulario_envio" id = "formulario" netlify>
+                        <p>
+                            <p id = "data_client">
+                                <label>Datos cliente</label>
+                            </p>
+                            <p id="lista_juegos">
+                                <label>Lista juegos</label>
+                            </p>
+                        </p>
+                    </form>
                 </div>
                 </div>
             </div>
@@ -135,6 +146,10 @@
         show_juegos();
         update_games_filter();
         update_games_show();
+    });
+
+    document.getElementById("enviar_form").addEventListener("click", function(){
+        enviar_formulario();
     });
 
 

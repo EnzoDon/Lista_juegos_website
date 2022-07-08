@@ -2,6 +2,7 @@ let games_list = [];
 let games_console = "pl2";
 let games_genre = [];
 let games_search = "";
+let name_client = "Lionel Messi";
 
 function show_filter_options(){
     var options = document.getElementById("filter_options");
@@ -183,16 +184,36 @@ function cargar_tabla_envio(){
     }
 }
 
+function enviar_formulario(){
+    const juego = document.createElement('p');
+            juego.innerHTML = `
+                <label>${name_client}</label>`;
+            document.getElementById("data_client").appendChild(juego);
+
+    for(i in games_list){
+        if(games_list[i]._select){
+            const juego = document.createElement('p');
+            juego.innerHTML = `
+                <label>Juego: ${games_list[i]._title} </label>   
+                <label>Consola: ${games_list[i]._console}</label>`;
+            document.getElementById("lista_juegos").appendChild(juego);
+        }
+    }
+
+    formulario_envio.submit();
+    
+}
+
 function initial_load(){
-    add_game("pes2019","Pro Evolution Soccer 2019", "./images/games/pes2019.jpg","dep","pl2");
-    add_game("barbie","Barbie", "./images/games/barbie.jpg","ter","pl2");
-    add_game("nba","NBA 2K", "./images/games/nba.jpg","dep","pl2");
-    add_game("crash","Crash", "./images/games/crash.jpg","ave","pl2");
-    add_game("nba_2","Oter NBA 2K", "./images/games/nba.jpg","dep","pl2");
-    add_game("nba_3","Otre NBA 2K", "./images/games/nba.jpg","dep","pl3");
-    add_game("nba_4","Otra NBA 2K", "./images/games/nba.jpg","dep","pl3");
-    add_game("nba_5","Ob NBA 2K", "./images/games/nba.jpg","dep","pl3");
-    add_game("nba_6","PES NBA 2K", "./images/games/nba.jpg","dep","pl3");
+    add_game("pes2019","Pro Evolution Soccer 2019", "../images/games/pes2019.jpg","dep","pl2");
+    add_game("barbie","Barbie", "../images/games/barbie.jpg","ter","pl2");
+    add_game("nba","NBA 2K", "../images/games/nba.jpg","dep","pl2");
+    add_game("crash","Crash", "../images/games/crash.jpg","ave","pl2");
+    add_game("nba_2","Oter NBA 2K", "../images/games/nba.jpg","dep","pl2");
+    add_game("nba_3","Otre NBA 2K", "../images/games/nba.jpg","dep","pl3");
+    add_game("nba_4","Otra NBA 2K", "../images/games/nba.jpg","dep","pl3");
+    add_game("nba_5","Ob NBA 2K", "../images/games/nba.jpg","dep","pl3");
+    add_game("nba_6","PES NBA 2K", "../images/games/nba.jpg","dep","pl3");
 
     add_listener_game();
     update_games_filter();
