@@ -189,21 +189,29 @@ function cargar_formulario(){
     data_cliente.innerHTML = '<label>Datos cliente</label>';
     const data_juegos = document.getElementById("juegos_form");
     data_juegos.innerHTML = '<label>Lista juegos</label>';
+    
     const juego = document.createElement('p');
-            juego.innerHTML = `
-                <label>${name_client}</label>`;
-            document.getElementById("data_client_form").appendChild(juego);
-
+    juego.innerHTML = `
+        <label for="nombre_cliente_form">Nombre Cliente: </label>
+        <input type="text" id="nombre_cliente_form">`;
+    document.getElementById("data_client_form").appendChild(juego);
+    document.getElementById("nombre_cliente_form").value = name_client;
     for(i in games_list){
         if(games_list[i]._select){
+            var title_form = i + "title_form";
+            var console_form = i + "_console_form"
             const juego = document.createElement('p');
             juego.innerHTML = `
-                <label>Juego: ${games_list[i]._title} </label>   
-                <label>Consola: ${games_list[i]._console}</label>`;
+                <label for=${title_form}>Nombre: </label>
+                <input type="text" id=${title_form}>
+                <label for=${console_form}>Consola: </label>
+                <input type="text" id=${console_form}>`;
+                       
             document.getElementById("juegos_form").appendChild(juego);
+            document.getElementById(title_form).value =  games_list[i]._title;
+            document.getElementById(console_form).value = games_list[i]._console;
         }
     }
-   
 }
 
 function initial_load(){
