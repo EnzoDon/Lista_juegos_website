@@ -190,7 +190,6 @@ function cargar_formulario(){
     const message_form = document.createElement('label');
     message_form.htmlFor = "name_client";
     message_form.innerHTML = `<input type="text" name = "name_client" id = "name_client"/>`;
-    //    message_form.value = "Nombre: " + name_client;
     document.getElementsByName("formulario_envio")[0].appendChild(message_form);
     document.getElementById("name_client").value = name_client;
     for(i in games_list){
@@ -206,13 +205,11 @@ function cargar_formulario(){
             console_form.htmlFor  = console;
             console_form.innerHTML = `<input type="text" name = ${console} id = ${console} />`;
             document.getElementsByName("formulario_envio")[0].appendChild(console_form);
-            //message_form.value = "Juego: " + games_list[i]._title + " - Consola: " + games_list[i]._console;
             document.getElementById(game).value = games_list[i]._title;
             document.getElementById(console).value = games_list[i]._console;
         }
     }
 
-    //document.getElementById("formulario").style.display = "flex";
 }
 
 function initial_load(){

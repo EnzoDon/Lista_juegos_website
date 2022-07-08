@@ -360,6 +360,6 @@ body {
     background-color: rgb(10, 131, 187);
 }
 
-#formulario{
+form[name="formulario_envio"]{
     display: none;
 }
