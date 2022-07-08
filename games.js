@@ -188,6 +188,7 @@ function cargar_formulario(){
     const data_cliente = document.getElementById("formulario");
     data_cliente.innerHTML = '';    
     const message_form = document.createElement('input');
+    message_form.name = "name_client";
     message_form.type = "message";
     message_form.value = "Nombre: " + name_client;
     document.getElementById("formulario").appendChild(message_form);
