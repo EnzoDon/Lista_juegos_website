@@ -198,11 +198,13 @@ function cargar_formulario(){
             var console = i + "console";
             const game_form = document.createElement('label');
             game_form.htmlFor  = game;
+            game_form.value = "Nombre juego" + i;
             game_form.innerHTML = `<input type="text" name = ${game} id = ${game} />`;
             document.getElementsByName("formulario_envio")[0].appendChild(game_form);
 
             const console_form = document.createElement('label');
             console_form.htmlFor  = console;
+            console_form.value = "Consola juego" + i;
             console_form.innerHTML = `<input type="text" name = ${console} id = ${console} />`;
             document.getElementsByName("formulario_envio")[0].appendChild(console_form);
             document.getElementById(game).value = games_list[i]._title;

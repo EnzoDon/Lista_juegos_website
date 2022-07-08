@@ -76,9 +76,7 @@
                     </div>
 
                     <form name="formulario_envio" netlify>
-                        <label for="nombre">Nombre:</label>
-                        <input type = "text" name="nombre" id ="nombre" />
-                        <input type="submit" value="Enviar">
+                        
                     </form>
                 </div>
                 </div>
@@ -144,8 +142,8 @@
     });
 
     document.getElementById("enviar_form").addEventListener("click", function(){
-        //cargar_formulario()
-        document.getElementsByName("formulario_envio")[0].style.display = "flex";
+        cargar_formulario()
+        document.getElementsByName("formulario_envio")[0].submit();
     });  
     
     
