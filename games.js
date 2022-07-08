@@ -186,9 +186,9 @@ function cargar_tabla_envio(){
 
 function cargar_formulario(){
     const data_cliente = document.getElementById("data_client");
-    myNode.innerHTML = '<label>Datos cliente</label>';
+    data_cliente.innerHTML = '<label>Datos cliente</label>';
     const data_juegos = document.getElementById("lista_juegos");
-    myNode.innerHTML = '<label>Lista juegos</label>';
+    data_juegos.innerHTML = '<label>Lista juegos</label>';
     const juego = document.createElement('p');
             juego.innerHTML = `
                 <label>${name_client}</label>`;

@@ -147,13 +147,9 @@
     });
 
     document.getElementById("enviar_form").addEventListener("click", function(){
-        document.getElementById("formulario_envio").submit();
-    });
-
-    document.getElementById("enviar_form").addEventListener('submit', (event) => {
         cargar_formulario()
-    });
-    
+        document.getElementById("formulario").submit();
+    });  
     
     
 </script>
