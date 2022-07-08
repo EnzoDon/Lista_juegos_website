@@ -184,7 +184,11 @@ function cargar_tabla_envio(){
     }
 }
 
-function enviar_formulario(){
+function cargar_formulario(){
+    const data_cliente = document.getElementById("data_client");
+    myNode.innerHTML = '<label>Datos cliente</label>';
+    const data_juegos = document.getElementById("lista_juegos");
+    myNode.innerHTML = '<label>Lista juegos</label>';
     const juego = document.createElement('p');
             juego.innerHTML = `
                 <label>${name_client}</label>`;
@@ -199,9 +203,7 @@ function enviar_formulario(){
             document.getElementById("lista_juegos").appendChild(juego);
         }
     }
-
-    formulario_envio.submit();
-    
+   
 }
 
 function initial_load(){

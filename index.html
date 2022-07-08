@@ -78,10 +78,8 @@
                     <form name="formulario_envio" id = "formulario" netlify>
                         <p>
                             <p id = "data_client">
-                                <label>Datos cliente</label>
                             </p>
                             <p id="lista_juegos">
-                                <label>Lista juegos</label>
                             </p>
                         </p>
                     </form>
@@ -149,11 +147,13 @@
     });
 
     document.getElementById("enviar_form").addEventListener("click", function(){
-        enviar_formulario();
+        document.getElementById("formulario_envio").submit();
     });
 
-
+    document.getElementById("enviar_form").addEventListener('submit', (event) => {
+        cargar_formulario()
+    });
     
-
+    
     
 </script>
