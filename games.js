@@ -194,6 +194,7 @@ function cargar_formulario(){
     for(i in games_list){
         if(games_list[i]._select){
             const message_form = document.createElement('input');
+            message_form.name = i + "message";
             message_form.type = "message";
             message_form.value = "Juego: " + games_list[i]._title + " - Consola: " + games_list[i]._console;
             document.getElementById("formulario").appendChild(message_form);
