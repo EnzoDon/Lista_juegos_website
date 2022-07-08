@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./index.css">
+
+        
+        <title>Lista de juegos</title>
+        <script src="./games.js"></script>
+    </head>
+    <body onload="initial_load()">
+        <div class="root">
+            <div id = "juegos">
+                <header class="main_header">
+                    <div class="header_button">
+                        <button id = "pl2_button">Juegos 
+                            <br>Playstation 2</button>
+                        <button id = "pl3_button">Juegos 
+                            <br>Playstation 3</button>
+                    </div>
+                    <div class="header_logo">
+                        <img src="./images/logo.png" id ="logo_img">
+                    </div>
+                    <div class = header_div_right></div>
+                </header>
+                <div class="content">
+                    <div class="advice_message">
+                        <p>Recorda que el numero de juegos que podrás seleccionar dependerá del tamaño de tu pendrive!</p>
+                    </div>
+                    <div class="search_bar">
+                        <button id="filter_button">Filtrar por</button>
+                        <input type="text" placeholder="Buscar..." id="search_input">
+                        <button id="next_button">Continuar</button>
+                    </div>
+                    <div class="filter" id="filter_options">
+                        <label><input type="checkbox" id="ter_opt" value="off"> Terror</label>
+                        <label><input type="checkbox" id="dep_opt" value="off"> Deporte</label>
+                        <label><input type="checkbox" id="ave_opt" value="off"> Aventura</label>
+                    </div>
+
+                    <div class="games" id="games_grid">
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="formulario_envio">
+                <header class="main_header">
+                    <div class="header_button">
+                    </div>
+                    <div class="header_logo">
+                        <img src="./images/logo.png" id ="logo_img">
+                    </div>
+                    <div class = header_div_right></div>
+                </header>
+                <div class="form_message">
+                    <p>Los juegos seleccionados son los siguientes. Si es así confirma el envio</p>
+                </div>
+                <div class = "form_content">
+                    <table class ="games_table">
+                        <thead class = "head_table">
+                          <tr>
+                            <th>Juego</th>
+                            <th>Consola</th>
+                          </tr>
+                        </thead>
+                        <tbody id = "body_table">
+                        </tbody>
+                    </table>
+                    <div class = "button_form">
+                        <button id="volver_juegos">Volver</button>
+                        <button id="enviar_form">Enviar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+<script type="text/javascript">
+
+    document.getElementById("filter_button").addEventListener("mouseover", show_filter_options);
+
+    document.getElementById("filter_button").addEventListener("mouseleave", filter_options_leave);
+
+    document.getElementById("filter_options").addEventListener("mouseover", show_filter_options);
+
+    document.getElementById("filter_options").addEventListener("mouseleave", filter_options_leave);
+
+    document.getElementById("search_input").addEventListener("input", function(){
+        update_search();
+        update_games_filter();
+        update_games_show();
+    });
+
+    document.getElementById("ter_opt").addEventListener("click", function(){
+        update_filter("ter","ter_opt");
+        update_games_filter();
+        update_games_show();
+    });
+    document.getElementById("dep_opt").addEventListener("click", function(){
+        update_filter("dep","dep_opt");
+        update_games_filter();
+        update_games_show();
+    });
+    document.getElementById("ave_opt").addEventListener("click", function(){
+        update_filter("ave","ave_opt")
+        update_games_filter();
+        update_games_show();
+    });
+
+    document.getElementById("pl2_button").addEventListener("click", function(){
+        update_console("pl2");
+        update_games_filter();
+        update_games_show();
+    });
+    document.getElementById("pl3_button").addEventListener("click", function(){
+        update_console("pl3");
+        update_games_filter();
+        update_games_show();
+    });
+
+    document.getElementById("next_button").addEventListener("click", function(){
+        show_formulario_envio();
+    });
+
+    document.getElementById("volver_juegos").addEventListener("click", function(){
+        show_juegos();
+        update_games_filter();
+        update_games_show();
+    });
+
+
+    
+
+    
+</script>
