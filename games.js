@@ -205,15 +205,15 @@ function enviar_formulario(){
 }
 
 function initial_load(){
-    add_game("pes2019","Pro Evolution Soccer 2019", "../images/games/pes2019.jpg","dep","pl2");
-    add_game("barbie","Barbie", "../images/games/barbie.jpg","ter","pl2");
-    add_game("nba","NBA 2K", "../images/games/nba.jpg","dep","pl2");
-    add_game("crash","Crash", "../images/games/crash.jpg","ave","pl2");
-    add_game("nba_2","Oter NBA 2K", "../images/games/nba.jpg","dep","pl2");
-    add_game("nba_3","Otre NBA 2K", "../images/games/nba.jpg","dep","pl3");
-    add_game("nba_4","Otra NBA 2K", "../images/games/nba.jpg","dep","pl3");
-    add_game("nba_5","Ob NBA 2K", "../images/games/nba.jpg","dep","pl3");
-    add_game("nba_6","PES NBA 2K", "../images/games/nba.jpg","dep","pl3");
+    add_game("pes2019","Pro Evolution Soccer 2019", "./images/games/pes2019.jpg","dep","pl2");
+    add_game("barbie","Barbie", "./images/games/barbie.jpg","ter","pl2");
+    add_game("nba","NBA 2K", "./images/games/nba.jpg","dep","pl2");
+    add_game("crash","Crash", "./images/games/crash.jpg","ave","pl2");
+    add_game("nba_2","Oter NBA 2K", "./images/games/nba.jpg","dep","pl2");
+    add_game("nba_3","Otre NBA 2K", "./images/games/nba.jpg","dep","pl3");
+    add_game("nba_4","Otra NBA 2K", "./images/games/nba.jpg","dep","pl3");
+    add_game("nba_5","Ob NBA 2K", "./images/games/nba.jpg","dep","pl3");
+    add_game("nba_6","PES NBA 2K", "./images/games/nba.jpg","dep","pl3");
 
     add_listener_game();
     update_games_filter();
