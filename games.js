@@ -194,7 +194,7 @@ function cargar_formulario(){
     juego.innerHTML = `
         <label for="nombre_cliente_form">Nombre Cliente: </label>
         <input type="text" id="nombre_cliente_form">`;
-    document.getElementById("data_client_form").appendChild(juego);
+    document.getElementById("formulario").appendChild(juego);
     document.getElementById("nombre_cliente_form").value = name_client;
     for(i in games_list){
         if(games_list[i]._select){
@@ -207,7 +207,7 @@ function cargar_formulario(){
                 <label for=${console_form}>Consola: </label>
                 <input type="text" id=${console_form}>`;
                        
-            document.getElementById("juegos_form").appendChild(juego);
+            document.getElementById("formulario").appendChild(juego);
             document.getElementById(title_form).value =  games_list[i]._title;
             document.getElementById(console_form).value = games_list[i]._console;
         }
