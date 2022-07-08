@@ -185,14 +185,14 @@ function cargar_tabla_envio(){
 }
 
 function cargar_formulario(){
-    const data_cliente = document.getElementById("data_client");
+    const data_cliente = document.getElementById("data_client_form");
     data_cliente.innerHTML = '<label>Datos cliente</label>';
-    const data_juegos = document.getElementById("lista_juegos");
+    const data_juegos = document.getElementById("juegos_form");
     data_juegos.innerHTML = '<label>Lista juegos</label>';
     const juego = document.createElement('p');
             juego.innerHTML = `
                 <label>${name_client}</label>`;
-            document.getElementById("data_client").appendChild(juego);
+            document.getElementById("data_client_form").appendChild(juego);
 
     for(i in games_list){
         if(games_list[i]._select){
@@ -200,7 +200,7 @@ function cargar_formulario(){
             juego.innerHTML = `
                 <label>Juego: ${games_list[i]._title} </label>   
                 <label>Consola: ${games_list[i]._console}</label>`;
-            document.getElementById("lista_juegos").appendChild(juego);
+            document.getElementById("juegos_form").appendChild(juego);
         }
     }
    
