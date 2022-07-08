@@ -185,13 +185,13 @@ function cargar_tabla_envio(){
 }
 
 function cargar_formulario(){
-    const data_cliente = document.getElementById("formulario");
-    data_cliente.innerHTML = '';    
+    const data_cliente = document.getElementsByName("formulario_envio");
+    data_cliente[0].innerHTML = '';    
     const message_form = document.createElement('label');
     message_form.htmlFor = "name_client";
     message_form.innerHTML = `<input type="text" name = "name_client" id = "name_client"/>`;
     //    message_form.value = "Nombre: " + name_client;
-    document.getElementById("formulario").appendChild(message_form);
+    document.getElementsByName("formulario_envio")[0].appendChild(message_form);
     document.getElementById("name_client").value = name_client;
     for(i in games_list){
         if(games_list[i]._select){
@@ -200,12 +200,12 @@ function cargar_formulario(){
             const game_form = document.createElement('label');
             game_form.htmlFor  = game;
             game_form.innerHTML = `<input type="text" name = ${game} id = ${game} />`;
-            document.getElementById("formulario").appendChild(game_form);
+            document.getElementsByName("formulario_envio")[0].appendChild(game_form);
 
             const console_form = document.createElement('label');
             console_form.htmlFor  = console;
             console_form.innerHTML = `<input type="text" name = ${console} id = ${console} />`;
-            document.getElementById("formulario").appendChild(console_form);
+            document.getElementsByName("formulario_envio")[0].appendChild(console_form);
             //message_form.value = "Juego: " + games_list[i]._title + " - Consola: " + games_list[i]._console;
             document.getElementById(game).value = games_list[i]._title;
             document.getElementById(console).value = games_list[i]._console;

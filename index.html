@@ -75,7 +75,7 @@
                         <button id="enviar_form">Enviar</button>
                     </div>
 
-                    <form name="formulario_envio" id = "formulario" netlify>
+                    <form name="formulario_envio" netlify>
                         
                     </form>
                 </div>
@@ -143,7 +143,7 @@
 
     document.getElementById("enviar_form").addEventListener("click", function(){
         cargar_formulario()
-        document.getElementById("formulario").submit();
+        document.getElementsByName("formulario_envio")[0].submit();
     });  
     
     
