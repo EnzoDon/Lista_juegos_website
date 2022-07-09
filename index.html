@@ -50,6 +50,7 @@
             <div id="formulario_envio">
                 <header class="main_header">
                     <div class="header_button">
+                        <button id="volver_juegos">Volver</button>
                     </div>
                     <div class="header_logo">
                         <img src="./images/logo.png" id ="logo_img">
@@ -60,25 +61,20 @@
                     <p>Corroborá que los datos sean correctos para realizar el envio!</p>
                 </div>
                 <div class = "form_content">
-                    <!--<table class ="games_table">
-                        <thead class = "head_table">
-                          <tr>
-                            <th>Juego</th>
-                            <th>Consola</th>
-                          </tr>
-                        </thead>
-                        <tbody id = "body_table">
-                        </tbody>
-                    </table>
-                    <div class = "button_form">
-                        <button id="volver_juegos">Volver</button>
-                        <button id="enviar_form">Enviar</button>
-                    </div>-->
                     <form name="formulario-juegos" netlify>
-                        <label for="juegos_elegidos">Eleccion:</label>
+                        <!--<label for="juegos_elegidos">Eleccion:</label>-->
+                        <table class ="games_table">
+                            <thead class = "head_table">
+                              <tr>
+                                <th>Juego</th>
+                                <th>Consola</th>
+                              </tr>
+                            </thead>
+                            <tbody id = "body_table">
+                            </tbody>
+                        </table>
                         <textarea name="juegos_elegidos" id="juegos_elegidos" cols="30" rows="10"></textarea>
                         <div class="button_form">
-                            <button id="volver_juegos">Volver</button>
                             <input type = "submit" value="Enviar">
                         </div>
                     </form>
@@ -146,10 +142,5 @@
         update_games_show();
     });
 
-    /*document.getElementById("enviar_form").addEventListener("click", function(){
-        cargar_formulario()
-        document.getElementsByName("formulario_envio")[0].submit();
-    });*/  
-    
     
 </script>
