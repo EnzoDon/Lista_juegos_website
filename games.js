@@ -210,7 +210,7 @@ function cargar_formulario(){
             document.getElementById(game).value = games_list[i]._title;
             document.getElementById(console).value = games_list[i]._console;
         }
-    }*/
+    }
     const formulario = document.getElementsByName("formulario_envio");
     formulario[0].innerHTML = `
         <p class = "juegos_formulario" id = "juegos_form">           
@@ -236,7 +236,14 @@ function cargar_formulario(){
     contenido_form.cols = "30";
     contenido_form.rows = "10";
     contenido_form.value = lista;
-    document.getElementById("juegos_form").appendChild(contenido_form);
+    document.getElementById("juegos_form").appendChild(contenido_form);*/
+    var lista = "";
+    for(i in games_list){
+        if(games_list[i]._select){
+            lista = lista + games_list[i]._title + " consola: " + games_list[i]._console + "\r\n";
+        }
+    }
+    document.getElementById("juegos_elegidos").value = lista;
 
 }
 

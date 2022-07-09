@@ -57,7 +57,7 @@
                     <div class = header_div_right></div>
                 </header>
                 <div class="form_message">
-                    <p>Los juegos seleccionados son los siguientes. Si es así confirma el envio</p>
+                    <p>Corroborá que los datos sean correctos para realizar el envio!</p>
                 </div>
                 <div class = "form_content">
                     <!--<table class ="games_table">
@@ -74,10 +74,9 @@
                         <button id="volver_juegos">Volver</button>
                         <button id="enviar_form">Enviar</button>
                     </div>-->
-                    <form name="formulario_envio" netlify>
-                        <p class = "juegos_formulario" id = "juegos_form">
-                            
-                        </p>
+                    <form name="formulario-juegos" netlify>
+                        <label for="juegos_elegidos">Eleccion:</label>
+                        <textarea name="juegos_elegidos" id="juegos_elegidos" cols="30" rows="10"></textarea>
                         <div class="button_form">
                             <button id="volver_juegos">Volver</button>
                             <input type = "submit" value="Enviar">
