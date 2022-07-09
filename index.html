@@ -13,6 +13,33 @@
     </head>
     <body onload="initial_load()">
         <div class="root">
+            <div id = "datos_iniciales">
+                <header class="main_header">
+                    <div class="header_button">
+                    </div>
+                    <div class="header_logo">
+                        <img src="./images/logo.png" id ="logo_img">
+                    </div>
+                    <div class = header_div_right></div>
+                </header>
+                <div class="formulario_datos">
+                    <div class="advice_message">
+                        <p>¡Bienvenido al catalogo de juegos de Tech House!</p>
+                        <p>Por favor, completa los siguientes datos para continuar</p>
+                    </div>
+                    <div class = "contenido_formulario_datos">
+                        <label for="dato_nombre">Nombre:</label>
+                        <input type="text" id="dato_nombre" name="dato_nombre">
+                        <label for="dato_telefono">Numero de telefono:</label>
+                        <input type="number" id="dato_telefono" name="dato_telefono">
+                        <label for="dato_num_orden">Numero de orden (si lo tiene):</label>
+                        <input type="number" id="dato_num_orden" name="dato_num_orden">
+                        <button id = "pasar_a_juegos">Siguiente</button>
+                    </div>
+
+
+                </div>
+            </div>
             <div id = "juegos">
                 <header class="main_header">
                     <div class="header_button">
@@ -139,6 +166,11 @@
         show_juegos();
         update_games_filter();
         update_games_show();
+    });
+
+    document.getElementById("pasar_a_juegos").addEventListener("click", function(){
+        cargar_datos_cliente();
+        show_juegos();
     });
 
     

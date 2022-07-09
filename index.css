@@ -100,19 +100,22 @@ body {
 }
 
 /*Mensaje de advertencia cantidad de juegos*/
-.content .advice_message{
+.advice_message{
     margin-right: auto;
     width: max-content;
-    height: 35px;
+    height: max-content;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
-.content .advice_message p{
+.advice_message p{
     font-family: 'Roboto Mono', monospace;
     align-self: center;
     color: rgb(27, 27, 255);
     padding-left: 10px;
+    margin-right: auto;
 }
 
 /*Barra de busqueda*/
@@ -388,4 +391,65 @@ body {
 
 #juegos_elegidos{
     display: none;
+}
+
+#datos_iniciales{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#datos_iniciales input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contenido_formulario_datos{
+    width: 50%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 4px;
+    margin-top: 10px;
+    margin-right: auto;
+
+}
+
+.contenido_formulario_datos input{
+    width: 50%;
+    margin-right: auto;
+    padding: 4px;
+}
+
+.contenido_formulario_datos label{
+    font-family: 'Roboto Mono', monospace;
+    align-self: center;
+    color: rgb(27, 27, 255);
+    padding-left: 10px;
+    margin-right: auto;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.contenido_formulario_datos button{
+    width: 20%;
+    height: 80%;
+    background-color: rgb(19, 180, 255);
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-shadow: 0 0 2px black;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 4px;
+}
+
+.contenido_formulario_datos button:hover{
+    background-color: rgb(10, 131, 187);
 }
