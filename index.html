@@ -60,7 +60,7 @@
                     <p>Los juegos seleccionados son los siguientes. Si es así confirma el envio</p>
                 </div>
                 <div class = "form_content">
-                    <table class ="games_table">
+                    <!--<table class ="games_table">
                         <thead class = "head_table">
                           <tr>
                             <th>Juego</th>
@@ -73,10 +73,15 @@
                     <div class = "button_form">
                         <button id="volver_juegos">Volver</button>
                         <button id="enviar_form">Enviar</button>
-                    </div>
-
+                    </div>-->
                     <form name="formulario_envio" netlify>
-                        
+                        <p class = "juegos_formulario" id = "juegos_form">
+                            
+                        </p>
+                        <div class="button_form">
+                            <button id="volver_juegos">Volver</button>
+                            <input type = "submit" value="Enviar">
+                        </div>
                     </form>
                 </div>
                 </div>
@@ -133,6 +138,7 @@
 
     document.getElementById("next_button").addEventListener("click", function(){
         show_formulario_envio();
+        cargar_formulario();
     });
 
     document.getElementById("volver_juegos").addEventListener("click", function(){
@@ -141,10 +147,10 @@
         update_games_show();
     });
 
-    document.getElementById("enviar_form").addEventListener("click", function(){
+    /*document.getElementById("enviar_form").addEventListener("click", function(){
         cargar_formulario()
         document.getElementsByName("formulario_envio")[0].submit();
-    });  
+    });*/  
     
     
 </script>

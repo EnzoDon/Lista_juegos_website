@@ -252,11 +252,6 @@ body {
     height: 85%;
 }
 
-
-#formulario_envio {
-    display: none;
-}
-
 .form_message{
     margin: 4px;
     height: max-content;
@@ -284,7 +279,7 @@ body {
 }
 
 
-.games_table {
+/*.games_table {
     background-color: rgb(211, 228, 248);
     border: 2px solid blue;
     width: 70%;
@@ -341,25 +336,71 @@ body {
     justify-content: center;
     align-content: center;
 
+}*/
+
+.form_content form{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    
 }
 
+
+.button_form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
 .button_form button{
-    width: 25%;
-    height: 60%;
+    width: 40%;
+    height: 80%;
     background-color: rgb(19, 180, 255);
+    align-self: center;
     border-radius: 5px;
     border: 1px solid white;
     font-family: 'Roboto Mono', monospace;
     color: white;
     text-shadow: 0 0 2px black;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.button_form input[type=submit]{
+    width: 40%;
+    height: 80%;
+    background-color: rgb(19, 180, 255);
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-shadow: 0 0 2px black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button_form button:hover{
     background-color: rgb(10, 131, 187);
 }
 
-form[name="formulario_envio"]{
-    display: none;
+.juegos_formulario{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
 }

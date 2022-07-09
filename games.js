@@ -158,12 +158,12 @@ function add_listener_game(){
 
 
 function show_formulario_envio(){
-    const myNode = document.getElementById("body_table");
-    myNode.innerHTML = '';
+    //const myNode = document.getElementById("body_table");
+    //myNode.innerHTML = '';
     document.getElementById("juegos").style.display = "none";
     document.getElementById("formulario_envio").style.display = "flex";
     document.getElementById("formulario_envio").style.flexDirection ="column";
-    cargar_tabla_envio();
+    //cargar_tabla_envio();
 }
 
 function show_juegos(){
@@ -185,7 +185,7 @@ function cargar_tabla_envio(){
 }
 
 function cargar_formulario(){
-    const data_cliente = document.getElementsByName("formulario_envio");
+    /*const data_cliente = document.getElementsByName("formulario_envio");
     data_cliente[0].innerHTML = '';    
     const message_form = document.createElement('label');
     message_form.htmlFor = "name_client";
@@ -210,7 +210,33 @@ function cargar_formulario(){
             document.getElementById(game).value = games_list[i]._title;
             document.getElementById(console).value = games_list[i]._console;
         }
+    }*/
+    const formulario = document.getElementsByName("formulario_envio");
+    formulario[0].innerHTML = `
+        <p class = "juegos_formulario" id = "juegos_form">           
+        </p>
+        <div class="button_form">
+            <button id="volver_juegos">Volver</button>
+            <input type = "submit" value="Enviar">
+        </div>`;
+
+    const label_contenido = document.createElement('label');
+    label_contenido.htmlFor  = "contenido_form";
+    label_contenido.value= "Eleccion";
+    document.getElementById("juegos_form").appendChild(label_contenido);
+    var lista = "";
+    for(i in games_list){
+        if(games_list[i]._select){
+            lista = lista + games_list[i]._title + " consola: " + games_list[i]._console + "\r\n";
+        }
     }
+    const contenido_form = document.createElement('textarea');
+    contenido_form.name = "contenido_form";
+    contenido_form.id = "contenido_form";
+    contenido_form.cols = "30";
+    contenido_form.rows = "10";
+    contenido_form.value = lista;
+    document.getElementById("juegos_form").appendChild(contenido_form);
 
 }
 
