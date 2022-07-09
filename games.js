@@ -186,6 +186,7 @@ function cargar_tabla_envio(){
 
 function cargar_formulario(){
     var lista = "";
+    lista = lista + "Cliente: " + name_client + "\r\n";
     for(i in games_list){
         if(games_list[i]._select){
             lista = lista + games_list[i]._title + " consola: " + games_list[i]._console + "\r\n";
