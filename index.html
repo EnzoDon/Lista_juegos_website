@@ -22,36 +22,42 @@
                     </div>
                     <div class = header_div_right></div>
                 </header>
-                <div class="formulario_datos">
-                    <div class="advice_message">
-                        <p>¡Bienvenido al catalogo de juegos de Tech House!</p>
-                        <p>Por favor, completa los siguientes datos para continuar</p>
+                <div class = "datos_iniciales_content">
+                    <div class="formulario_datos">
+                        <div class="advice_message">
+                            <p>¡Bienvenido al catalogo de juegos de Tech House!</p>
+                            <p>Por favor, completa los siguientes datos para continuar</p>
+                        </div>
+                        <div class = "contenido_formulario_datos">
+                            <label for="dato_nombre">Nombre:</label>
+                            <input type="text" id="dato_nombre" name="dato_nombre">
+                            <label for="dato_telefono">Numero de telefono:</label>
+                            <input type="number" id="dato_telefono" name="dato_telefono">
+                            <label for="dato_num_orden">Numero de orden (si lo tiene):</label>
+                            <input type="number" id="dato_num_orden" name="dato_num_orden">
+                            <button id = "pasar_a_juegos">Siguiente</button>
+                        </div>
                     </div>
-                    <div class = "contenido_formulario_datos">
-                        <label for="dato_nombre">Nombre:</label>
-                        <input type="text" id="dato_nombre" name="dato_nombre">
-                        <label for="dato_telefono">Numero de telefono:</label>
-                        <input type="number" id="dato_telefono" name="dato_telefono">
-                        <label for="dato_num_orden">Numero de orden (si lo tiene):</label>
-                        <input type="number" id="dato_num_orden" name="dato_num_orden">
-                        <button id = "pasar_a_juegos">Siguiente</button>
+                    <div class ="imagenes_datos_inciales">
+                        <img src="./images/team7.png" id ="team_img">
                     </div>
-
-
+                    
                 </div>
             </div>
             <div id = "juegos">
                 <header class="main_header">
                     <div class="header_button">
+                        <button id = "volver_button">Volver</button>
+                    </div>
+                    <div class="header_logo">
+                        <img src="./images/logo.png" id ="logo_img">
+                    </div>
+                    <div class = "header_div_right">
                         <button id = "pl2_button">Juegos 
                             <br>Playstation 2</button>
                         <button id = "pl3_button">Juegos 
                             <br>Playstation 3</button>
                     </div>
-                    <div class="header_logo">
-                        <img src="./images/logo.png" id ="logo_img">
-                    </div>
-                    <div class = header_div_right></div>
                 </header>
                 <div class="content">
                     <div class="advice_message">
@@ -144,6 +150,10 @@
         update_filter("ave","ave_opt")
         update_games_filter();
         update_games_show();
+    });
+
+    document.getElementById("volver_button").addEventListener("click", function(){
+        show_carga_inicial();
     });
 
     document.getElementById("pl2_button").addEventListener("click", function(){
